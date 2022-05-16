@@ -21,9 +21,9 @@ function genRandomNumber(maxValue) {
 }
 
 function changeArray(currectAnswer) {
-  MainArray[0].value = genRandomNumber(maxValue * 1.5).toFixed(1);
+  MainArray[0].value = (currectAnswer - genRandomNumber(10)).toFixed(1);
   MainArray[0].isCorrect = false;
-  MainArray[1].value = genRandomNumber(maxValue * 1.5).toFixed(1);
+  MainArray[1].value = (currectAnswer + genRandomNumber(10)).toFixed(1);
   MainArray[1].isCorrect = false;
   MainArray[2].value = currectAnswer.toFixed(1);
   MainArray[2].isCorrect = true;
