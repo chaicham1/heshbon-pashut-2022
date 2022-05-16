@@ -1,8 +1,16 @@
 import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
-import { COLORS } from "../../utils/constants";
+import { COLORS, PATH } from "../../utils/constants";
+import { useLocation } from "react-router-dom";
 
 const GameBoard = ({ drill, options, answerCallback }) => {
+  const location = useLocation();
+
+  const checkIfSimple =
+    location.pathname === PATH.ADD ||
+    location.pathname === PATH.SUB ||
+    location.pathname === PATH.MULT;
+
   return (
     <Grid
       container
@@ -74,7 +82,7 @@ const GameBoard = ({ drill, options, answerCallback }) => {
                   answerCallback(option.isCorrect);
                 }}
               >
-                {option.value}
+                {checkIfSimple ? Math.floor(option.value) : option.value}
               </Button>
             </Grid>
           );
