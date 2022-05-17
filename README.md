@@ -1,6 +1,6 @@
-https://heshbon-pashut-amdocs.netlify.app/
-
 חשבון פשוט
+קישור למשחק: https://heshbon-pashut-amdocs.netlify.app/
+
 
 משחק מבוסס React, מתאים גם למובייל.
 
