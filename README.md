@@ -1,4 +1,5 @@
-חשבון פשוט
+חשבון פשוט.
+
 קישור למשחק: https://heshbon-pashut-amdocs.netlify.app/
 
 
