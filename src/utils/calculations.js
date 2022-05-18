@@ -4,7 +4,7 @@ export const MainArray = [
   { value: "תשובה נכונה", isCorrect: true },
 ];
 
-const maxValue = 50;
+const maxValue = 35;
 
 const operatorArray = ["*", "/", "+", "-"];
 
@@ -21,11 +21,14 @@ function genRandomNumber(maxValue) {
 }
 
 function changeArray(currectAnswer) {
-  MainArray[0].value = (currectAnswer - genRandomNumber(10)).toFixed(1);
+  MainArray[0].value =
+    currectAnswer > 0
+      ? (currectAnswer - genRandomNumber(10)).toFixed(2)
+      : (currectAnswer + genRandomNumber(10) + genRandomNumber(1)).toFixed(2);
   MainArray[0].isCorrect = false;
-  MainArray[1].value = (currectAnswer + genRandomNumber(10)).toFixed(1);
+  MainArray[1].value = (currectAnswer + genRandomNumber(10)).toFixed(2);
   MainArray[1].isCorrect = false;
-  MainArray[2].value = currectAnswer.toFixed(1);
+  MainArray[2].value = currectAnswer.toFixed(2);
   MainArray[2].isCorrect = true;
 
   shuffleArray(MainArray);
